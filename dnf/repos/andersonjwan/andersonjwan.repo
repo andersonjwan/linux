@@ -1,0 +1,4 @@
+[andersonjwan]
+name=Jacob's Repository
+baseurl=file:///usr/share/repository/
+enabled=1
