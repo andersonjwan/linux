@@ -10,6 +10,7 @@
     <packagelist>
       <packagereq type="default">emacs</packagereq>
       <packagereq type="optional">texlive-scheme-full</packagereq>
+      <packagereq type="default">clang-devel</packagereq>
     </packagelist>
   </group>
 </comps>
