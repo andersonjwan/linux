@@ -7,5 +7,8 @@
     <description>My set of packages</description>
     <default>false</default>
     <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="default">emacs</packagereq>
+    </packagelist>
   </group>
 </comps>
