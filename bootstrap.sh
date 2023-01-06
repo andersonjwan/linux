@@ -7,7 +7,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
-    source dnf/bootstrap.sh 
+    source dnf/bootstrap.sh
 }
 
 # Bootstrap Fedora.
