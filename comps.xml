@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
+<comps>
+  <group>
+    <id>andersonjwan</id>
+    <name>Jacob's Packages</name>
+    <description>My set of packages</description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+  </group>
+</comps>
