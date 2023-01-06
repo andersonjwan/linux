@@ -9,6 +9,7 @@
     <uservisible>true</uservisible>
     <packagelist>
       <packagereq type="default">emacs</packagereq>
+      <packagereq type="optional">texlive-scheme-full</packagereq>
     </packagelist>
   </group>
 </comps>
