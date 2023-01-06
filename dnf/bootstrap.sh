@@ -12,8 +12,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 function createRepo() {    
     local path="/usr/share/repository/$1";
 
-    echo "mkdir --parents $path";
-    echo "createrepo $path";
+    mkdir --parents "$path";
+    createrepo "$path";
 
     echo "fedora[dnf]: created repository... $path";
 }
@@ -26,8 +26,8 @@ function initGroup() {
     local repodir="/usr/share/repository/$2";
     local groupfile="$(basename $1)";
 
-    echo cp $1 "$repodir/repodata/";
-    echo createrepo --groupfile="$repodir/repodata/$groupfile" "$repodir";
+    cp $1 "$repodir/repodata/";
+    createrepo --groupfile="$repodir/repodata/$groupfile" "$repodir";
 
     echo "fedora[dnf]: initialized group... $repodir/repodata/$groupfile";
 }
