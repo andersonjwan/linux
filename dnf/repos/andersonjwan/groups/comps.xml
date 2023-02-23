@@ -3,17 +3,18 @@
 <comps>
   <group>
     <id>andersonjwan-core</id>
-    <name>Core</name>
+    <name>Jacob's Core</name>
     <description>My core set of packages.</description>
     <default>false</default>
     <uservisible>true</uservisible>
     <packagelist>
       <packagereq type="optional">texlive-scheme-full</packagereq>
+      <packagereq type="default">emacs</packagereq>
     </packagelist>
   </group>
   <group>
     <id>andersonjwan-cpp</id>
-    <name>C++ Development</name>
+    <name>Jacob's C++ Development</name>
     <description>My set of packages for C++ development.</description>
     <default>false</default>
     <uservisible>true</uservisible>
@@ -27,7 +28,7 @@
   </group>
   <group>
     <id>andersonjwan-java</id>
-    <name>Java Development</name>
+    <name>Jacob's Java Development</name>
     <description>My set of packages for Java development.</description>
     <default>false</default>
     <uservisible>true</uservisible>
