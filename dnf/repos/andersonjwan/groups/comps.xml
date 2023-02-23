@@ -2,15 +2,37 @@
 <!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
 <comps>
   <group>
-    <id>andersonjwan</id>
-    <name>Jacob's Packages</name>
-    <description>My set of packages</description>
+    <id>andersonjwan-core</id>
+    <name>Core</name>
+    <description>My core set of packages.</description>
     <default>false</default>
     <uservisible>true</uservisible>
     <packagelist>
-      <packagereq type="default">emacs</packagereq>
       <packagereq type="optional">texlive-scheme-full</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>andersonjwan-cpp</id>
+    <name>C++ Development</name>
+    <description>My set of packages for C++ development.</description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
       <packagereq type="default">clang-devel</packagereq>
+      <packagereq type="optional">cmake</packagereq>
+      <packagereq type="optional">cppcheck</packagereq>
+      <packagereq type="optional">doxygen</packagereq>
+      <packagereq type="optional">python3-devel</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>andersonjwan-java</id>
+    <name>Java Development</name>
+    <description>My set of packages for Java development.</description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="optional">java-17-openjdk-devel</packagereq>
     </packagelist>
   </group>
 </comps>
