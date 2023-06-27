@@ -1,4 +1,4 @@
 [andersonjwan]
-name=Jacob's Repository
+name=Jacob's Packages
 baseurl=file:///usr/share/repository/andersonjwan
 enabled=1

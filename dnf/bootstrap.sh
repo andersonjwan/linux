@@ -15,10 +15,10 @@ function createRepo() {
 
     mkdir --parents "$path";
     createrepo --quiet "$path";
-    echo "fedora[dnf]: created repository... $path";
+    echo "[DEBUG] bootstrap: dnf: created repository... $path";
 
-    cp "repos/$1/$1.repo" /etc/yum.repos.d/
-    echo "fedora[dnf]: installed repository configuration file... /etc/yum.repos.d/$1.repo";
+    cp "repositories//$1/$1.repo" /etc/yum.repos.d/
+    echo "[DEBUG] bootstrap: dnf: installed repository configuration file... /etc/yum.repos.d/$1.repo";
 }
 
 # Copy group configuration to repository.
@@ -31,18 +31,17 @@ function initGroup() {
 
     cp $1 "$repodir/repodata/";
     createrepo --quiet --groupfile="$repodir/repodata/$groupfile" "$repodir";
-    echo "fedora[dnf]: initialized group... $repodir/repodata/$groupfile";
+
+    echo "[DEBUG] bootstrap: dnf: initialized group... $repodir/repodata/$groupfile";
 }
 
 # Do the thing to bootstrap it.
 function doIt() {
-    for repo in repos/*/ ; do
+    for repo in repositories/*/ ; do
 	reponame=$(basename $repo)
-	createRepo $reponame
 
-	for group in $repo/groups/* ; do
-	    initGroup $group $reponame
-	done
+	createRepo $reponame
+	initGroup "$repo/comps.xml" $reponame
     done
 }
 
