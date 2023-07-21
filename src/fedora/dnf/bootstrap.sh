@@ -17,7 +17,7 @@ function createRepo() {
     createrepo --quiet "$path";
     echo "[DEBUG] bootstrap: dnf: created repository... $path";
 
-    cp "repositories//$1/$1.repo" /etc/yum.repos.d/
+    cp "repos/$1/$1.repo" /etc/yum.repos.d/
     echo "[DEBUG] bootstrap: dnf: installed repository configuration file... /etc/yum.repos.d/$1.repo";
 }
 
@@ -39,7 +39,7 @@ function initGroup() {
 function doIt() {
     sudo dnf --assumeyes install createrepo
 
-    for repo in repositories/*/ ; do
+    for repo in repos/*/ ; do
 	reponame=$(basename $repo)
 
 	createRepo $reponame

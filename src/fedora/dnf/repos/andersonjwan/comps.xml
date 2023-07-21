@@ -4,12 +4,13 @@
   <group>
     <id>andersonjwan-core</id>
     <name>Jacob's Core</name>
-    <description>My core set of packages.</description>
+    <description>My set of core packages.</description>
     <default>false</default>
     <uservisible>true</uservisible>
     <packagelist>
       <packagereq type="optional">texlive-scheme-full</packagereq>
       <packagereq type="default">emacs</packagereq>
+      <packagereq type="default">gnome-tweaks</packagereq>
     </packagelist>
   </group>
   <group>
