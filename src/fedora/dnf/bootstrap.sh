@@ -37,6 +37,8 @@ function initGroup() {
 
 # Do the thing to bootstrap it.
 function doIt() {
+    sudo dnf --assumeyes install createrepo
+
     for repo in repositories/*/ ; do
 	reponame=$(basename $repo)
 

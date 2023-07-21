@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# Bootstrap Fedora post-installation.
+# Bootstrap for Linux post-installations.
 # @author "Jacob Anderson <andersonjwan@gmail.com>"
 
 # Set working directory to this file's root directory.
 cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
-    source dnf/bootstrap.sh
+    source src/bootstrap.sh
 }
 
 # Bootstrap Fedora.
