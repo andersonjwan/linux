@@ -35,16 +35,32 @@ function initGroup() {
     echo "[DEBUG] bootstrap: dnf: initialized group... $repodir/repodata/$groupfile";
 }
 
-# Do the thing to bootstrap it.
-function doIt() {
-    sudo dnf --assumeyes install createrepo
+# Initialize all DNF-related procedures.
+function init() {
+    # Enable RPM Fusion-based repositories
+    sudo dnf install --nogpgcheck \
+        https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+        https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+    sudo dnf --assumeyes install createrepo
+}
+
+# Install all DNF custom repositories.
+#
+# This allows custom groups of packages to be installed from local repository lists, accordingly.
+function initRepositories() {
     for repo in repos/*/ ; do
 	reponame=$(basename $repo)
 
 	createRepo $reponame
 	initGroup "$repo/comps.xml" $reponame
     done
+}
+
+# Do the thing to bootstrap it.
+function doIt() {
+    init;
+    initRepositories;
 }
 
 doIt;
