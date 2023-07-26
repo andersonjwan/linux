@@ -3,7 +3,7 @@
 <comps>
   <group>
     <id>andersonjwan-core</id>
-    <name>My Core</name>
+    <name>My Core Applications</name>
     <description>My set of core packages.</description>
     <default>false</default>
     <uservisible>true</uservisible>
@@ -14,7 +14,7 @@
   </group>
   <group>
     <id>andersonjwan-cpp</id>
-    <name>My C++ Development</name>
+    <name>My C++ Development Tools</name>
     <description>My set of packages for C++ development.</description>
     <default>false</default>
     <uservisible>true</uservisible>
@@ -29,7 +29,7 @@
   </group>
   <group>
     <id>andersonjwan-java</id>
-    <name>My Java Development</name>
+    <name>My Java Development Tools</name>
     <description>My set of packages for Java development.</description>
     <default>false</default>
     <uservisible>true</uservisible>
